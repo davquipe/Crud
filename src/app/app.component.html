@@ -6,13 +6,12 @@
   </h1>
   </div>
   <div class="col-sm-4">
-    <div class="alert alert-success alert-dismissable">
-      <a href="#" class="close">
+    <div class="alert alert-success alert-dismissable" ng="msg">
+      <a href="#" class="close" (click)="closeAlert()">
         &times;
       </a>
-      yyyyyyyyyyyyyy
+      {{title}}
     </div>
-    
   </div>  
   </div>
   <div class="row">
@@ -27,7 +26,12 @@
             Nombre
           </label> 
           <div class="col-sm-10">
-          <input type="text" class="form-control" id="name" name="name"  placeholder="Nombre">
+          <input 
+            type="text" 
+            class="form-control" 
+            id="name" 
+            name="name"   
+            placeholder="Nombre">
           </div>
           <label for=name class="control-label col-sm-2">
             Email
