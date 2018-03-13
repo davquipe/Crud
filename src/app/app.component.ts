@@ -6,29 +6,38 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title:string = 'Lista de Angular';
+  title:string = 'Lista de Personas';
 
-  Alumnos = [
-  	{'nombre': 'DAvid', position: 'manager'},
-  	{'nombre': 'Angel', position: 'admin'},
-  	{'nombre': 'Josue', position: 'programmer'},
-  	{'nombre': 'DAnte', position: 'TI'}
+  personas = [
+  	{'nombre': 'David', position: 'Manager'},
+  	{'nombre': 'Angel', position: 'Admin'},
+  	{'nombre': 'Josue', position: 'Programmer'},
+  	{'nombre': 'Dante', position: 'TI'}
 
   ];
+
   model:any = {};
+  model12:any = {};
+  msg:string = '';
+  hideUpdate:boolean = true;
 
-addAlumnos():void{
-
+addPersonas():void{
+	this.personas.push(this.model);
+	this.model = {};
+	this.msg = 'Se agrego Correctamente ;)';
 }
 
-deleteAlumnos():void{
-
+deletePersonas():void{
+	this.personas.splice(1, 1);
+	this.msg = "Borrado :(";
 }
 
-editAlumnos():void{
+myValue;
+
+editPersonas():void{
 
 }
-updateAlumnos():void{
+updatePersonas():void{
 }
 sss
 }
